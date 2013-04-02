@@ -4,4 +4,4 @@ def reader():
     x = f.read()
     f.close()
     return x
-print reader()[0:1]
+print reader().rstrip("\n")
