@@ -1,0 +1,30 @@
+This repository contains the python scripts:
+
+readCount
+addCount
+osCounter
+
+The textfiles:
+
+count
+osName
+osCount
+
+The php files:
+
+index
+
+
+index acts as the homepage for fling.seas.upenn.edu/~tdelac/cgi-bin/. It displays plain text that denotes the visitor count to that particular page as well as a list of operating systems that have accessed the page and their respective counts (number of each). It calls readCount, addCount, and osCounter to accomplish the calculation of these statistics.
+
+count stores the current visitor count as a string of plain text.
+
+osName stores a comma-delimited string of operating system names that have accessed the fling site.
+
+osCount stores a comma-delimited string of number counts that correspond to the operating system names in osName.
+
+readCount returns the current count stored in count.
+
+addCount pulls the current count stored in count, updates it by adding 1 to the integer of the pulled string, and updates count to contain a string of the new value.
+
+osCounter is a more complex script that takes an argument, checks to see if it matches any string values stored in osName. If it does, then osCounter calls up osCount and adds 1 to the value corresponding in position to that of the matching osName element. If it does not, then osCounter appends the argument to the end of the string stored in osName and appends a new string, 1, to the end of the string stored in osCount. At the end of the if/else blocks, osCounter prints the contents of osName and osCount, matching each operating system name with its respective count. The argument expected is given by index.php and should be the operating system name of a visitor's computer.
